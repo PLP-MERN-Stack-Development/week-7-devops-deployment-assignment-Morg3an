@@ -1,78 +1,170 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19955833&assignment_repo_type=AssignmentRepo)
-# Deployment and DevOps for MERN Applications
+Jersey Shop – Deployment & DevOps
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
 
-## Assignment Overview
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+This is the final deployment and DevOps-ready version of the Jersey Shop MERN stack application.
 
-## Getting Started
+🌐 Deployed URLs
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+Frontend: https://jersey-shop-ecommerce.vercel.app
 
-## Files Included
+Backend API: https://jersey-shop-server.onrender.com/api
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+🚀 What’s Included
 
-## Requirements
+✅ Full Deployment
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+Frontend deployed on Vercel
 
-## Deployment Platforms
+Backend deployed on Render with MongoDB Atlas as database
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+Environment variables configured securely on both platforms
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+🔄 CI/CD Setup
 
-## CI/CD Pipeline
+GitHub Actions for continuous integration and deployment
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+Frontend & backend auto-deploy on push to main branch
 
-## Submission
+⚙️ Monitoring
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+/health route added to Express backend
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+UptimeRobot monitoring active
 
-## Resources
+Sentry used for error tracking on backend
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+Render server logs enabled
+
+📸 Screenshots
+
+✅ CI/CD Pipeline in Action
+
+![CI/CD Pipeline in Action](image.png)
+
+
+✅ Frontend Deployment
+
+![Frontend Deployment](image-1.png)
+
+
+✅ Backend Deployment
+
+![Backend Deployment](image-2.png)
+
+
+🧪 Features Implemented
+
+🧑‍💻 User
+
+Register/Login with email/password
+
+Browse jerseys, customize, add to cart
+
+Checkout and place orders
+
+View past orders
+
+🔧 Admin
+
+Admin dashboard
+
+CRUD for products and orders
+
+Delete users
+
+🛠 Tech Stack
+
+Frontend
+
+React (Vite)
+
+React Router
+
+Context API
+
+Axios
+
+TailwindCSS
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB (Atlas) + Mongoose
+
+JWT Auth
+
+Helmet for security
+
+Morgan for logging
+
+Sentry for error tracking
+
+📁 Project Structure
+
+jersey-shop/
+├── client/             # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   └── services/
+├── server/             # Express backend
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── middleware/
+│   └── utils/
+
+⚙️ Setup Instructions
+
+1. Clone the Repo
+
+git clone https://github.com/Morg3an/jersey-shop-ecommerce.git
+cd jersey-shop-ecommerce
+
+2. Install Dependencies
+
+npm install
+cd client
+npm install
+
+3. Create .env Files
+
+server/.env
+
+PORT=5000
+MONGO_URI=<your-mongodb-uri>
+JWT_SECRET=<your-jwt-secret>
+SENTRY_DSN=<optional-sentry-dsn>
+
+client/.env
+
+VITE_API_URL=https://jersey-shop-server.onrender.com/api
+
+4. Run the App Locally
+
+# In root folder
+npm run dev
+# In another terminal:
+cd client && npm run dev
+
+📦 Deployment Scripts
+
+npm run build for frontend
+
+npm start for backend
+
+🛡 Maintenance Plan
+
+Weekly npm update for dependencies
+
+MongoDB Atlas scheduled backups
+
+Manual redeploy from previous commits in case of failure (rollback strategy)
+
+```
