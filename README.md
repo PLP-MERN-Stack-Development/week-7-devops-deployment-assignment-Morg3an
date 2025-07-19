@@ -1,110 +1,96 @@
-Jersey Shop – Deployment & DevOps
-
-
+# Jersey Shop – Deployment & DevOps
 
 This is the final deployment and DevOps-ready version of the Jersey Shop MERN stack application.
 
-🌐 Deployed URLs
+---
 
-Frontend: https://jersey-shop-ecommerce.vercel.app
+## 🌐 Deployed URLs
 
-Backend API: https://jersey-shop-server.onrender.com/api
+* **Frontend:** [https://jersey-shop-ecommerce.vercel.app](https://jersey-shop-ecommerce.vercel.app)
+* **Backend API:** [https://jersey-shop-server.onrender.com/api](https://jersey-shop-server.onrender.com/api)
 
-🚀 What’s Included
+---
 
-✅ Full Deployment
+## 🚀 What’s Included
 
-Frontend deployed on Vercel
+### ✅ Full Deployment
 
-Backend deployed on Render with MongoDB Atlas as database
+* Frontend deployed on **Vercel**
+* Backend deployed on **Render** with **MongoDB Atlas** as database
+* Environment variables configured securely on both platforms
 
-Environment variables configured securely on both platforms
+### 🔄 CI/CD Setup
 
-🔄 CI/CD Setup
+* GitHub Actions for continuous integration and deployment
+* Frontend & backend auto-deploy on push to `main` branch
 
-GitHub Actions for continuous integration and deployment
+### ⚙️ Monitoring
 
-Frontend & backend auto-deploy on push to main branch
+* **/health** route added to Express backend
+* **UptimeRobot** monitoring active
+* **Sentry** used for error tracking on backend
+* Render server logs enabled
 
-⚙️ Monitoring
+---
 
-/health route added to Express backend
+## 📸 Screenshots
 
-UptimeRobot monitoring active
+### ✅ CI/CD Pipeline in Action
 
-Sentry used for error tracking on backend
+![CI/CD Pipeline in Action](image-3.png)
 
-Render server logs enabled
+### ✅ Frontend Deployment
 
-📸 Screenshots
+![Frontend Deployment](image-4.png)
 
-✅ CI/CD Pipeline in Action
+### ✅ Backend Deployment
 
-![CI/CD Pipeline in Action](image.png)
+![Backend Deployment](image-5.png)
 
+---
 
-✅ Frontend Deployment
+## 🧪 Features Implemented
 
-![Frontend Deployment](image-1.png)
+### 🧑‍💻 User
 
+* Register/Login with email/password
+* Browse jerseys, customize, add to cart
+* Checkout and place orders
+* View past orders
 
-✅ Backend Deployment
+### 🔧 Admin
 
-![Backend Deployment](image-2.png)
+* Admin dashboard
+* CRUD for products and orders
+* Delete users
 
+---
 
-🧪 Features Implemented
+## 🛠 Tech Stack
 
-🧑‍💻 User
+### Frontend
 
-Register/Login with email/password
+* React (Vite)
+* React Router
+* Context API
+* Axios
+* TailwindCSS
 
-Browse jerseys, customize, add to cart
+### Backend
 
-Checkout and place orders
+* Node.js
+* Express.js
+* MongoDB (Atlas) + Mongoose
+* JWT Auth
+* Helmet for security
+* Morgan for logging
+* Sentry for error tracking
 
-View past orders
+---
 
-🔧 Admin
+## 📁 Project Structure
 
-Admin dashboard
-
-CRUD for products and orders
-
-Delete users
-
-🛠 Tech Stack
-
-Frontend
-
-React (Vite)
-
-React Router
-
-Context API
-
-Axios
-
-TailwindCSS
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB (Atlas) + Mongoose
-
-JWT Auth
-
-Helmet for security
-
-Morgan for logging
-
-Sentry for error tracking
-
-📁 Project Structure
-
+```
 jersey-shop/
 ├── client/             # React frontend
 │   ├── src/
@@ -119,52 +105,66 @@ jersey-shop/
 │   ├── controllers/
 │   ├── middleware/
 │   └── utils/
+```
 
-⚙️ Setup Instructions
+---
 
-1. Clone the Repo
+## ⚙️ Setup Instructions
 
-git clone https://github.com/Morg3an/jersey-shop-ecommerce.git
-cd jersey-shop-ecommerce
+### 1. Clone the Repo
 
-2. Install Dependencies
+```bash
+git clone https://github.com/Morg3an/jersey-shop.git
+cd jersey-shop
+```
 
+### 2. Install Dependencies
+
+```bash
 npm install
 cd client
 npm install
+```
 
-3. Create .env Files
+### 3. Create .env Files
 
-server/.env
+**server/.env**
 
+```
 PORT=5000
 MONGO_URI=<your-mongodb-uri>
 JWT_SECRET=<your-jwt-secret>
 SENTRY_DSN=<optional-sentry-dsn>
+```
 
-client/.env
+**client/.env**
 
+```
 VITE_API_URL=https://jersey-shop-server.onrender.com/api
+```
 
-4. Run the App Locally
+### 4. Run the App Locally
 
+```bash
 # In root folder
 npm run dev
 # In another terminal:
 cd client && npm run dev
-
-📦 Deployment Scripts
-
-npm run build for frontend
-
-npm start for backend
-
-🛡 Maintenance Plan
-
-Weekly npm update for dependencies
-
-MongoDB Atlas scheduled backups
-
-Manual redeploy from previous commits in case of failure (rollback strategy)
-
 ```
+
+---
+
+## 📦 Deployment Scripts
+
+* `npm run build` for frontend
+* `npm start` for backend
+
+---
+
+## 🛡 Maintenance Plan
+
+* Weekly `npm update` for dependencies
+* MongoDB Atlas scheduled backups
+* Manual redeploy from previous commits in case of failure (rollback strategy)
+
+---
