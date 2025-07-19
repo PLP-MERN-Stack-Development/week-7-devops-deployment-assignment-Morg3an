@@ -114,8 +114,8 @@ jersey-shop/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/Morg3an/jersey-shop.git
-cd jersey-shop
+git clone https://github.com/Morg3an/jersey-shop-ecommerce.git
+cd jersey-shop-ecommerce
 ```
 
 ### 2. Install Dependencies
